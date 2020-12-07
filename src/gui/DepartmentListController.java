@@ -35,6 +35,7 @@ public class DepartmentListController implements Initializable {
 	
 	private ObservableList<Department> obsList;
 	
+	// Ação do botão "BtNew"
 	@FXML
 	public void onBtNewAction() {
 		System.out.println("onBtNewAction");
@@ -48,15 +49,18 @@ public class DepartmentListController implements Initializable {
 	public void initialize(URL url, ResourceBundle rb) {
 		initializeNodes();
 	}
-
+	
+	// Método padrão para iniciar o comportamento das colunas 
 	private void initializeNodes() {
 		tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
 		tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
 		
+		// Método padrão para deixar a tabela na tela inteira
 		Stage stage = (Stage) Main.getMainScene().getWindow();
 		tableViewDepartment.prefHeightProperty().bind(stage.heightProperty());
 	}
 	
+	// Método para atualizar a tabela Department a partir da lista
 	public void uptadeTableView() {
 		if (service == null) {
 			throw new IllegalStateException("Service was null");
