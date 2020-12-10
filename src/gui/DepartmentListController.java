@@ -2,6 +2,7 @@ package gui;
 
 import java.io.IOException;
 
+
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
@@ -9,7 +10,6 @@ import java.util.ResourceBundle;
 
 import application.Main;
 import db.DbException;
-import db.DbIntegrityException;
 import gui.listeners.DataChangeListener;
 import gui.util.Alerts;
 import gui.util.Utils;
